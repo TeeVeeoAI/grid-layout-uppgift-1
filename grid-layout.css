@@ -50,8 +50,10 @@ header{
 }
 aside{
     grid-area: e;
-    background-color: black;
+    background-color: wheat;
     height: 700px;
+    color: black;
+    font-size: 3em;
 }
 
 b{
@@ -64,10 +66,21 @@ footer{
     grid-area: d;
     background-color: #811818;
     height: 150px;
+    color: aquamarine;
 }
 
 img{
     grid-area: g;
     height: 700px;
     width: 100%;
+}
+
+#call img{
+    height: auto;
+}
+
+#minion{
+    font-size: 4em;
+    margin: 45%;
+    color: whitesmoke;
 }
