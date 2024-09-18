@@ -11,16 +11,14 @@ html, body{
 
 .container{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: minmax(100px,auto);
 
     grid-template-areas: 
     "a a a a"
     "b b c c"
     "e g c c"
     "d d d d";
-}
-
-.container *{
-    min-height: 100px;
 }
 
 header{
@@ -48,6 +46,7 @@ header{
     padding: 5px;
     font-size: 1.5em;
 }
+
 aside{
     grid-area: e;
     background-color: wheat;
@@ -58,8 +57,20 @@ aside{
 
 b{
     grid-area: g;
-    background-color: white;
     height: 700px;
+    z-index: 1;
+}
+
+b:hover {
+    background-color: aquamarine;
+}
+
+b:hover > img{
+    visibility: visible;
+}
+
+b > img{
+    visibility: hidden;
 }
 
 footer{
@@ -83,4 +94,22 @@ img{
     font-size: 4em;
     margin: 45%;
     color: whitesmoke;
+}
+
+script{
+    grid-area: g;
+}
+
+l-dot-wave{
+    grid-area: g;
+    height: 100%;
+    width: 100%;
+    visibility: visible;
+    padding: 20px;
+    background-color: wheat;
+}
+
+l-dot-wave:hover{
+    z-index: 2;
+
 }
